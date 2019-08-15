@@ -1,28 +1,39 @@
+.footer {
+  margin-top: 50px;
+}
 .footer i.fa-social {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .footer i.fa-linkedin-square {
-    color: #0077B5;
+  color: #0077b5;
 }
 
 .footer i.fa-spotify {
-    color: #1ED760;
+  color: #1ed760;
 }
 
 section blockquote h4 {
-    color: #0ce3ac;
+  color: #0ce3ac;
+}
+
+section {
+  text-align: justify;
+}
+
+section:first-child {
+  padding-top: 70px;
 }
 
 .text-center {
-    text-align: center
+  text-align: center;
 }
 
 .footer .copyright {
-    font-size: 15px;
-    margin: 40px 0px;
+  font-size: 15px;
+  margin: 40px 0px;
 }
 
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
