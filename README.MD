@@ -18,6 +18,8 @@ This project is a personal webpage designed to introduce myself and showcase my 
 - HTML
 - CSS
 - JavaScript
+- [Cascadia Code](https://github.com/microsoft/cascadia-code)
+- [Font Awesome](https://fontawesome.com/)
 
 ## Contact
 
