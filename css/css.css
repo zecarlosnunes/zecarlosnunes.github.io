@@ -1,39 +1,110 @@
-.footer {
-  margin-top: 50px;
-}
-.footer i.fa-social {
-  font-size: 60px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.footer i.fa-linkedin-square {
-  color: #0077b5;
+html {
+  height: 100vh;
 }
 
-.footer i.fa-spotify {
-  color: #1ed760;
-}
-
-section blockquote h4 {
-  color: #0ce3ac;
-}
-
-section {
-  text-align: justify;
-}
-
-section:first-child {
-  padding-top: 70px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.footer .copyright {
+body {
+  font-family: 'Cascadia Code', sans-serif;
+  grid-template-rows: auto auto auto;
   font-size: 15px;
-  margin: 40px 0px;
-}
 
-.pointer {
-  cursor: pointer;
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+
+    a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 10px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      &.active {
+        background-color: #4CAF50;
+        color: white;
+      }
+    }
+  }
+
+  .page {
+    padding-bottom: 100px;
+  }
+
+  section {
+    padding: 10px;
+    padding-bottom: 20px;
+
+    p+p {
+      margin-top: 15px;
+    }
+  }
+
+  h1 {
+    padding-bottom: 15px;
+  }
+
+  .content {
+    max-width: 600px;
+    margin: 0 auto;
+
+    img {
+      max-width: 100%;
+      height: auto;
+
+      &.company-img {
+        max-height: 15px;
+      }
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 5px 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+
+    p {
+      padding-top: 10px;
+
+      &:last-child {
+        padding-bottom: 10px;
+      }
+    }
+
+    a {
+      margin: 0 10px;
+      text-decoration: none;
+
+      &.github {
+        color: #ffffff;
+      }
+
+      &.linkedIn {
+        color: #0077b5;
+      }
+
+      &.spotify {
+        color: #1ed760;
+      }
+
+      &:hover {
+        color: #ddd;
+      }
+    }
+  }
 }
