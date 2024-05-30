@@ -1,43 +1,87 @@
 * {
   margin: 0;
   padding: 0;
-}
 
-html {
-  height: 100vh;
 }
 
 body {
+  --panel-bg-color: #2f363d;
+  --panel-text-color: #f2f2f2;
+
+  --txt-color: #000000;
+  --bg-color: #ffffff;
+  --link-color: maroon;
+
+  --spotify-color: #1ed760;
+  --linkedIn-color: #79b8ff;
+  --github-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --panel-bg-color: #1b1f23;
+    --panel-bg-hover-color: #2c2f33;
+    --panel-text-color: #f0f0f0;
+
+    --txt-color: #f0f0f0;
+    --bg-color: #24292e;
+    --link-color: #34d058;
+
+    --spotify-color: #1ed760;
+    --linkedIn-color: #79b8ff;
+    --github-color: #ffffff;
+  }
+}
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
   font-family: 'Cascadia Code', sans-serif;
   grid-template-rows: auto auto auto;
-  font-size: 15px;
+  font-size: 16px;
+  height: 100vh;
+  background-color: var(--bg-color);
+
+  .page {
+    padding-bottom: 100px;
+    color: var(--txt-color);
+
+    a {
+      color: var(--link-color)
+    }
+
+    h1 {
+      color: var(--link-color)
+    }
+  }
+
+  .navbar,
+  .footer {
+    background-color: var(--panel-bg-color);
+    color: var(--panel-text-color);
+    font-size: 1.1rem;
+
+    a {
+      color: var(--panel-text-color);
+      text-decoration: none;
+    }
+  }
 
   .navbar {
-    background-color: #333;
     overflow: hidden;
 
     a {
       float: left;
       display: block;
-      color: #f2f2f2;
       text-align: center;
       padding: 10px 10px;
-      text-decoration: none;
 
       &:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      &.active {
-        background-color: #4CAF50;
-        color: white;
+        background-color: var(--panel-bg-hover-color);
       }
     }
-  }
-
-  .page {
-    padding-bottom: 100px;
   }
 
   section {
@@ -56,27 +100,15 @@ body {
   .content {
     max-width: 600px;
     margin: 0 auto;
-
-    img {
-      max-width: 100%;
-      height: auto;
-
-      &.company-img {
-        max-height: 15px;
-      }
-    }
   }
 
   .footer {
     position: fixed;
     bottom: 0;
 
-    background-color: #333;
-    color: #f2f2f2;
     padding: 5px 0px;
     text-align: center;
     width: 100%;
-    font-size: 1.1rem;
 
     p {
       padding-top: 10px;
@@ -88,23 +120,33 @@ body {
 
     a {
       margin: 0 10px;
-      text-decoration: none;
+      white-space: nowrap;
 
       &.github {
         color: #ffffff;
       }
 
       &.linkedIn {
-        color: #0077b5;
+        color: var(--linkedIn-color);
       }
 
       &.spotify {
-        color: #1ed760;
+        color: var(--spotify-color);
       }
 
       &:hover {
-        color: #ddd;
+        color: var(--github-color);
       }
     }
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
