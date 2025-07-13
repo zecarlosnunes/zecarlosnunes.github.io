@@ -25,14 +25,19 @@
 
 <body>
   <div class="page">
-    <div class="navbar ">
-      <div class="content">
-        <a href="#about"><span>#about</span></a>
-        <a href="#experience"><span>#experience</span></a>
-      </div>
-    </div>
+    <header class="navbar">
+      <nav class="content">
+        <div class="nav-links">
+          <a href="#about"><span>#about</span></a>
+          <a href="#experience"><span>#experience</span></a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <i class="fa fa-moon-o" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </header>
 
-    <div class="content">
+    <main class="content">
       <section id="about" class="about">
         <h1>#about</h1>
         <p>As a Full-Stack Developer, I possess a comprehensive understanding of all layers in computer software
@@ -66,8 +71,8 @@
           </p>
         </div>
       </section>
-    </div>
-    <div class="footer">
+    </main>
+    <footer class="footer">
       <p>
         <a href="https://github.com/zecarlosnunes" class="github">
           <i class="fa fa-github fa-social" aria-hidden="true"></i>
@@ -83,8 +88,10 @@
         </a>
       </p>
       <p>&copy; 2025 zecarlosnunes</p>
-    </div>
+    </footer>
   </div>
+
+  <script src="js/theme-toggle.min.js"></script>
 </body>
 
 </html>
